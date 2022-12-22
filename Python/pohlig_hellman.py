@@ -1,4 +1,4 @@
-import Python.helper_functions as helper_functions
+import helper_functions
 import sympy
 
 def pohlig_hellman(p, a, b):
@@ -38,9 +38,5 @@ def pohlig_hellman(p, a, b):
         firstlist.append(tup[0])
         secondlist.append(tup[1])
     x = helper_functions.crt(firstlist, secondlist)
-    if helper_functions.powermod(a, x, p) == b:
-        return x
-    else:
-        print("something went wrong!")
-        return x
-    
+    return x
+ 
